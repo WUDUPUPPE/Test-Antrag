@@ -1,2 +1,12 @@
 \section{Thema}
-STEMgraph - Entwicklung einerAPI-gestützten Webanwendung zur Visualisierung von Lern-Repositories
+STEMgraph - Entwicklung einer API-gestützten Datenpipeline und Webanwendung zur Aufbereitung und Visualisierung von STEM-Lerninhalten
+\\\\
+STEM steht für Science, Technology, Engineering und Mathematics und bezeichnet Themenbereiche aus Naturwissenschaften, Technik, Ingenieurwesen und Mathematik.
+\\
+STEMgraph ist ein internes Open-Source Projekt, womit man Lerninhalte aus diesen Themenbereichen strukturiert aufbereitet und darstellt.
+Das Projekt dient unter anderem dem Marketing gegenüber Studierenden. Es soll sie auf technische Themen und die Open-Source Arbeit des Unternehmens aufmerksam machen sowie gegebenenfalls Interesse an einer späteren Tätigkeit wecken soll.
+\\\\
+Im Rahmen des Projekts werden JSON Kommentarblöcke aus GitHub-Repositories automatisiert heruntergeladen, analysiert und in eine einheitliche JSON-Struktur überführt.
+Anschließend werden die Daten in eine Neo4j-Graphdatenbank importiert.
+Die FastAPI stellt die Daten über verschiedene Endpoints bereit.
+Aufbauend wird ein Frontend entwickelt, wo die Challenges, ihre Abhängigkeiten und weitere Metadaten visualisiert werden könnnen. 
