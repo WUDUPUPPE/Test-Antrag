@@ -19,21 +19,21 @@ jobs:
       - name: LaTeX kompilieren
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: testantrag.tex
+          root_file: main.tex
 
       - name: PDF umbenennen
-        run: mv testantrag.pdf Testantrag.pdf
+        run: mv main.pdf Projektantrag.pdf
 
       - name: PDF als Artefakt speichern
         uses: actions/upload-artifact@v4
         with:
-          name: Testantrag-PDF
-          path: Testantrag.pdf
+          name: Projektantrag-PDF
+          path: Projektantrag.pdf
 
       - name: GitHub Release erstellen und PDF anhängen
         uses: softprops/action-gh-release@v2
         with:
-          name: "Testantrag ${{ github.ref_name }}"
-          files: Testantrag.pdf
+          name: "Projektantrag ${{ github.ref_name }}"
+          files: Projektantrag.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
