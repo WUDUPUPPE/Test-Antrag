@@ -1,18 +1,26 @@
 \section{Ausgangssituation}
 
-\subsection{Aktueller technischer Stand}
-
-Die Lerninhalte des STEMgraph Projekt liegen in mehreren GitHub Repositiries.
-Sie enthalten unter anderem Aufgaben(Challenges) mit Informaionen wie Titel, Keywords, Autoren, Erstelluingsdaten und die Abhängigkeiten zwischen denn Lerninhalten.
-\\
-Um diese Informationen Verarbeiten zu können müssen diese automatisiert aus verschiedenen Repositories gesammelt und in eine einheitliche Struktur gebracht werden.
-Ohne diese zetrale Verarbeitung müssten die Daten manuell zusammengesucht werden.
-Zudem wäre es schwierig die Abhängigkeiten zwischen den einzelnen Challenges strukturiert darzustellen und über eine Anwendung bereitzustellen.
-
-
 \subsection{Unternehmenskontext}
 
-STEMgraph
+STEMgraph wird als Firmen internes Open-Source-Projekt verwendet. Das Projekt dient dazu, technische Lerninhalte strukturiert aufzubereiten und die Open-Source-Arbeit des Unternehmens nach außen sichtbar zu machen. 
+Die Hauptzielgruppe sind Studierende, die da durch auf technische Themen und mögliche Tätigkeiten im Unternehmen aufmerksam gemacht werden sollen.
 
 \subsection{Problemstellung}
 
+Die Lerninhalte liegen in GitHub Repositories und nicht in einer zentralen, einheitlich aufbereiteten Struktur vor.
+Ohne eine zetrale Verarbeitung müssten die Daten manuell zusammengesucht werden.
+\\
+Außerdem wäre es schwierig die Abhängigkeiten zwischen den einzelnen Challenges strukturiert darzustellen und über eine Anwendung bereitzustellen.
+\\
+Zudem fehlt eine Benutzeroberfläche, wo die Daten und desen Beziehung zwischen denn Inhalten übersichtlich dargestellt werden können.
+
+\subsection{Geplante technische Umsetzung}
+
+Die Lerninhalte des STEMgraph Projekts liegen in mehreren GitHub Repositories.
+Sie enthalten unter anderem Aufgaben(Challenges) mit Informationen wie Titel, Keywords, Autoren, Erstelluingsdaten und die Abhängigkeiten zwischen denn Lerninhalten.
+\\
+Um diese Informationen verarbeiten zu können, sollten diese automatisiert über Skripte aus verschiedenen Repositories gesammelt und in eine einheitliche JSON-Struktur gebracht werden, um sie dann anschließend in die Neo4j Graphdatenbank zu importieren.
+\\
+Dafür wird eine FastAPI umgesetzt mit verschiedenen Endpoints.
+Die gespeicherten Daten in Neo4j können dann über die API abgerufen werden, damit die Datenbank nicht direkt vom Frontend aufgerufen werden kann.
+Zusätzlich wir ein Frontend entwickelt um die Challenges, Abhängigkeiten und weitere Metadaten übersichtlich darzustellen.
