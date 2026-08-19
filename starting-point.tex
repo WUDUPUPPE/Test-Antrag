@@ -3,12 +3,12 @@
 \subsection{Unternehmenskontext}
 
 STEMgraph wird als Firmen internes Open-Source-Projekt verwendet. Das Projekt dient dazu, technische Lerninhalte strukturiert aufzubereiten und die Open-Source-Arbeit des Unternehmens nach außen sichtbar zu machen. 
-Die Hauptzielgruppe sind Studierende, die da durch auf technische Themen und mögliche Tätigkeiten im Unternehmen aufmerksam gemacht werden sollen.
+Die Hauptzielgruppe, sind Studierende, die da durch auf technische Themen und mögliche Tätigkeiten im Unternehmen aufmerksam gemacht werden sollen.
 
 \subsection{Problemstellung}
 
 Die Lerninhalte liegen in GitHub Repositories und nicht in einer zentralen, einheitlich aufbereiteten Struktur vor.
-Ohne eine zetrale Verarbeitung müssten die Daten manuell zusammengesucht werden.
+Ohne eine zentrale Verarbeitung müssten die Daten manuell zusammengesucht und aufbereitet werden.
 \\
 Außerdem wäre es schwierig die Abhängigkeiten zwischen den einzelnen Challenges strukturiert darzustellen und über eine Anwendung bereitzustellen.
 \\
@@ -17,9 +17,9 @@ Zudem fehlt eine Benutzeroberfläche, wo die Daten und desen Beziehung zwischen 
 \subsection{Geplante technische Umsetzung}
 
 Die Lerninhalte des STEMgraph Projekts liegen in mehreren GitHub Repositories.
-Sie enthalten unter anderem Aufgaben(Challenges) mit Informationen wie Titel, Keywords, Autoren, Erstelluingsdaten und die Abhängigkeiten zwischen denn Lerninhalten.
+Sie enthalten unter anderem Aufgaben(Challenges) mit Informationen wie Titel, Keywords, Autoren, Erstellungsdaten und die Abhängigkeiten zwischen denn Lerninhalten.
 \\
-Um diese Informationen verarbeiten zu können, sollten diese automatisiert über Skripte aus verschiedenen Repositories gesammelt und in eine einheitliche JSON-Struktur gebracht werden, um sie dann anschließend in die Neo4j Graphdatenbank zu importieren.
+Um diese Informationen verarbeiten zu können, sollten diese automatisiert über Skripte aus verschiedenen Repositories gesammelt, in eine einheitliche JSON-Struktur gebracht werden um sie dann anschließend in die Neo4j Graphdatenbank zu importieren.
 \\
 Dafür wird eine FastAPI umgesetzt mit verschiedenen Endpoints.
 Die gespeicherten Daten in Neo4j können dann über die API abgerufen werden, damit die Datenbank nicht direkt vom Frontend aufgerufen werden kann.
