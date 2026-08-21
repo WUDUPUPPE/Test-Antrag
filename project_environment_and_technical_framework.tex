@@ -17,20 +17,21 @@ Das Frontend bekommt die Daten über die API und besitzt keinen direkten Zugiff 
 \subsection{Systemarchitektur und Datenfluss}
 
 Der Datenfluss des Systems ist wie folgt aufgebaut:
-
+{\footnotesize
 \begin{verbatim}
-                                GitHub-Repositories
-                                        |
-                                Bash-/Python-Skripte
-                                        |
-                                  graph-data.json
-                                        |
-                                      Neo4j
-                                        |
-                                     FastAPI
-                                        |
-                                     Frontend
+                                        GitHub-Repositories
+                                                |
+                                        Bash-/Python-Skripte
+                                                |
+                                        graph-data.json
+                                                |
+                                              Neo4j
+                                                |
+                                             FastAPI
+                                                |
+                                             Frontend
 \end{verbatim}
+}
 Die Projektdokumentation wird dahingegen in LateX erstellt.
 \\
 Der Build der Dokumentation wir durch eine Makefile automatisiert.
