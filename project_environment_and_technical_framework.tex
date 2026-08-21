@@ -1,3 +1,37 @@
 \section{Projektumfeld und technische Umgebung}
 
 \subsection{Technische Umgebung}
+
+Die Entwicklung erfolft im Unternehmensumfeld und deren Systemen.
+GitHub wird zur Bereistellung der Lern-Repositories verwendet und dient der Versionierung der Inhalte.
+\\
+Die Skripte werden in Bash und Python umgesetzt, auf einer Linuxumgebung entwickelt und ausgeführt.
+Für die Schnittstelle zwischen Datenbank und Frontend wird eine API eingesetzt mit dem FastAPI Framework aus Python.
+\\
+Neo4j dient als Graphdatenbank zur Speicherung der strukturierten Aufgaben(Challenges) und ihren Beziehungen(Abhängigkeiten).
+\\
+Die API und Neo4j werden in einer Docker-Umgebung in einem Container auf Linux betrieben und über eine Docker-Compose miteinander verbunden.
+\\
+Das Frontend bekommt die Daten über die API und besitzt keinen direkten Zugiff auf die Neo4j-Datenbank.
+
+\subsection{Systemarchitektur und Datenfluss}
+
+Der Datenfluss des Systems ist wie folgt aufgebaut:
+
+\begin{verbatim}
+                                GitHub-Repositories
+                                        |
+                                Bash-/Python-Skripte
+                                        |
+                                  graph-data.json
+                                        |
+                                      Neo4j
+                                        |
+                                     FastAPI
+                                        |
+                                     Frontend
+\end{verbatim}
+Die Projektdokumentation wird dahingegen in LateX erstellt.
+\\
+Der Build der Dokumentation wir durch eine Makefile automatisiert.
+Zudem erledigt ein GitHub-Workflow in einer Tag/Release-Versionierung, den automatisierten Build und die Ablage des erzeugten Dokuments.
