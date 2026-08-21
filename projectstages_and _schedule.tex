@@ -1,0 +1,57 @@
+\section{Projektphasen und Zeitplanung}
+
+\subsection{Analyse und Planung}
+
+\begin{itemize}[itemsep=0.2pt]
+    \item Bestehende Datenstruktur in den GitHub-Repositories analysieren.
+    \item Der Technologie-Stack musste besprochen und gewählt werden, sowie Einarbeitung in diesen.
+    \item Die Anforderung an Datenpipline, API und Frontend mit dem Betrieb durchgehen und festlegen.
+    \item Graphstruktur für die Aufgaben(Challenges) und Beziehungen(Abhängigkeiten) finalisieren da sie durch die Lern-Repositories teilweise gegeben sind.
+\end{itemize}
+
+\subsection{Datenpipline und Skripte}
+
+\begin{itemize}[itemsep=0.2pt]
+    \item Bash-Skripte zum Herunterladen, Aktualsieren oder zur erweiterung der Lern-Repositories.
+    \item Kommentarblöcke und relevante Metadaten aus denn Repositories extrahieren.
+    \item Erzeugung und Validierung der \texttt{graph-data.json} umsetzten.
+    \item Implementierung der Daten in die Neo4j-Datenbank.
+\end{itemize}
+
+\subsection{Neo4j und API}
+
+\begin{itemize}[itemsep=0.2pt]
+    \item Das Neo4j-Datenmodell und Importverfahren per Skript umsetzten.
+    \item Knoten(Challenges) und Beziehung(Abhängigkeiten) per Python im Skript strukturiert importieren.
+    \item FastAPI und Neo4j-Client verbinden.
+    \item API-Endpoints für Graph-, Listen-, Keywordsansicht der Challenges umsetzten.
+    \item Implementierung von Admin-Endpoints, um per Zeitplan oder manuell die Challengedaten aktualisieren zu können.
+    \item Validierung der Statusdaten um ihn im Frontend darstellen zu können.
+\end{itemize}
+
+\subsection{Frontend}
+
+\begin{itemize}[itemsep=0.2pt]
+    \item Moderne Frontend-Grundstruktur und Route-Navigation erstellen.
+    \item API-Anbindung implememtieren.
+    \item Graph-, Listen-, Keywordansicht der Challenges umsetzten.
+    \item Hover-, Detailansicht und Filterung integrieren.
+\end{itemize}
+
+\subsection{Test und Qualiätssicherung}
+
+\begin{itemize}[itemsep=0.2pt]
+    \item Skripte, Status und JSON-Erzeugung testen.
+    \item API-Endpoints und die Ausgabe testen.
+    \item Datenbestand zwischen der JSON und Neo4jdatenbank vergleichen.
+    \item Frontend-Anbindung und die Darstellungen prüfen.
+    \item Erkannte Fehler korrigieren und funktionsfähig machen.
+\end{itemize}
+
+\subsection{Dokumentation und Übergabe}
+
+\begin{itemize}[itemsep=0.2pt]
+    \item Projektdokumenation und denn Antrag in LaTeX erstellt.
+    \item Automatisierter Makefile und GitHub-Workflow Build
+    \item Technische Übergabe und Besprechung mit dem Ausbilder durchführen
+\end{itemize}
